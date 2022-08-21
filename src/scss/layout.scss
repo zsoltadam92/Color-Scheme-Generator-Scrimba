@@ -1,3 +1,5 @@
+@use 'function' as *;
+
 *,*::after,*::before {
   font-size: 100%;
   box-sizing: border-box;
@@ -15,12 +17,12 @@ body {
 }
 
 .container {
-  width: 550px;
-  height: 550px;
-  border: 2px solid black;
-  border-radius: 15px;
+  width: rem(550);
+  height: rem(550);
+  border: rem(2) solid black;
+  border-radius: rem(15);
   background: white;
-  box-shadow: 3px 3px 10px rgba(250, 246, 246, 0.336);
+  box-shadow: rem(3) rem(3) rem(3) rgba(250, 246, 246, 0.336);
   overflow: hidden;
   position: relative;
 }

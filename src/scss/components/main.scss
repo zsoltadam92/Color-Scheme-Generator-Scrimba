@@ -1,5 +1,7 @@
+@use '../function' as *;
+@use '../mixins' as *;
+
 .main {
-  height: 404px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  height: rem(404);
+  @include grid();
 }

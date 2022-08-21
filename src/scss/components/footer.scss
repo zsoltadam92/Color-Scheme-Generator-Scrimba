@@ -1,6 +1,8 @@
+@use '../function' as *;
+@use '../mixins' as *;
+
 .footer {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  @include grid();
 
   &__color-hex{
     cursor: pointer;
@@ -16,10 +18,10 @@
     position: absolute;
     bottom: 60px;
     left: 200px;
-    background: linear-gradient(135deg,rgb(163, 238, 163),rgb(16, 90, 16));
-    color: white;
-    padding: 20px 50px;
-    border-radius: 10px;
+    background: linear-gradient(135deg,#a3eea3,#105a10);
+    color: #ffffff;
+    padding: rem(20) rem(50);
+    border-radius: rem(10);
   }
   
   p {
