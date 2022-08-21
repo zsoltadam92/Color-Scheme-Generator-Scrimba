@@ -34,6 +34,10 @@ function renderColors(data) {
     //click hex values to copy to clipboard
     hexName.addEventListener('click', () => {
       document.execCommand("copy");
+      document.querySelector('.footer__copied').style.display = "block"
+      setTimeout(() => {
+        document.querySelector('.footer__copied').style.display = "none"
+      }, 1500);
     })
     hexName.addEventListener("copy", (event) => {
       event.preventDefault();

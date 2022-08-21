@@ -4,8 +4,24 @@
 
   &__color-hex{
     cursor: pointer;
-  }
+    
+    &:hover {
+      background-color: #1F2937;
+      color: #ffffff;
+    }
 
+  }
+  &__copied {
+    display: none;
+    position: absolute;
+    bottom: 60px;
+    left: 200px;
+    background: linear-gradient(135deg,rgb(163, 238, 163),rgb(16, 90, 16));
+    color: white;
+    padding: 20px 50px;
+    border-radius: 10px;
+  }
+  
   p {
     text-align: center;
   }

@@ -17,7 +17,10 @@ body {
 .container {
   width: 550px;
   height: 550px;
-  border: 3px solid black;
+  border: 2px solid black;
   border-radius: 15px;
   background: white;
+  box-shadow: 3px 3px 10px rgba(250, 246, 246, 0.336);
+  overflow: hidden;
+  position: relative;
 }
