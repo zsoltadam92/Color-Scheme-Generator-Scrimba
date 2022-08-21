@@ -9,3 +9,10 @@
   height: rem($height);
   border-radius: rem($radius);
 }
+
+@mixin breakpoints_down {
+  @media (max-width: 599px) {
+    @content;
+  }
+  
+}

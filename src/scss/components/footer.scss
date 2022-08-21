@@ -11,7 +11,6 @@
       background-color: #1F2937;
       color: #ffffff;
     }
-
   }
   &__copied {
     display: none;
@@ -22,9 +21,18 @@
     color: #ffffff;
     padding: rem(20) rem(50);
     border-radius: rem(10);
+
+    @include breakpoints_down {
+      left: 95px;
+      padding: rem(10) rem(25);
+    }
   }
   
   p {
     text-align: center;
+
+    @include breakpoints_down {
+      font-size: rem(11);
+    }
   }
 }

@@ -1,4 +1,5 @@
 @use 'function' as *;
+@use 'mixins' as *;
 
 *,*::after,*::before {
   font-size: 100%;
@@ -25,4 +26,9 @@ body {
   box-shadow: rem(3) rem(3) rem(3) rgba(250, 246, 246, 0.336);
   overflow: hidden;
   position: relative;
+
+  @include breakpoints_down {
+    width: rem(300);
+    height: rem(500);
+  }
 }
