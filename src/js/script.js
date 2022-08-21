@@ -28,5 +28,19 @@ function renderColors(data) {
   const colorColumns = document.querySelectorAll('.main__color')
   Array.from(colorColumns).map((colorColumn,index)=> colorColumn.style.background =  data.colors[index].hex.value)
   const hexNames = document.querySelectorAll('.footer__color-hex')
-  Array.from(hexNames).map((hexName,index)=> hexName.innerHTML = `<p>${data.colors[index].hex.value}</p>`)    
+  Array.from(hexNames).map((hexName,index)=> {
+    hexName.innerHTML = `<p>${data.colors[index].hex.value}</p>`
+    
+    //click hex values to copy to clipboard
+    hexName.addEventListener('click', () => {
+      document.execCommand("copy");
+    })
+    hexName.addEventListener("copy", (event) => {
+      event.preventDefault();
+      if (event.clipboardData) {
+        event.clipboardData.setData("text/plain", hexName.textContent);
+      }
+    });
+  })
 }
+
